@@ -7,40 +7,11 @@
 <body>
 	<nav><a href="2005.html" class="left">&lt;-- Previous</a> <a class="center">2010<a> <a href="2015.html" class="right">Next --&gt;</a></nav>
 	<div class="computer_screen">
-		<iframe id="computerscreen" src="oldpages/2010/index.html"></iframe>
+		<iframe src="oldpages/2010/index.html"></iframe>
 	</div>
 	<div class="phone_screen">
-		<iframe id="phonescreen" src="mobilepages/2010/index.html"></iframe>
+		<iframe src="mobilepages/2010/index.html"></iframe>
 	</div>
-	<script>
-		const phone = document.getElementById('phonescreen');
-  		const computer = document.getElementById('computerscreen');
-		
-		computer.addEventListener('load', () => {
-			computer.contentWindow.addEventListener('scroll', handleScroll);
-		});
-
-		function handleScroll() {
-			/*
-			var sLeft = computer.contentWindow.scrollLeft;
-    			var sTop = computer.contentWindow.scrollTop;
-    			phone.contentWindow.scrollTo(sLeft, sTop);
-			console.log("works"); */
-			// Get the scroll positions of the computer iframe's content window
-    			const sLeft = computer.contentWindow.scrollLeft;
-    			const sTop = computer.contentWindow.scrollTop;
-
-    			// Get the position of the phone iframe within its parent div
-    			const phoneOffsetLeft = phone.offsetLeft;
-    			const phoneOffsetTop = phone.offsetTop;
-
-    			// Scroll the phone iframe to the same positions
-    			phone.contentWindow.scrollTo(sLeft + phoneOffsetLeft, sTop + phoneOffsetTop);
-
-    			// Log a message to the console to confirm that the function is working
-    			console.log("works");
-		};
-	</script>
-</body>
+	</body>
 </html>
 
