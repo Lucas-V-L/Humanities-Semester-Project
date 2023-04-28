@@ -13,7 +13,7 @@
 		<iframe id="phonescreen" src="mobilepages/2010/index.html"></iframe>
 	</div>
 	<script>
-		const phone = document.getElementById('phonescren');
+		const phone = document.getElementById('phonescreen');
   		const computer = document.getElementById('computerscreen');
 		
 		computer.addEventListener('load', () => {
@@ -21,10 +21,25 @@
 		});
 
 		function handleScroll() {
+			/*
 			var sLeft = computer.contentWindow.scrollLeft;
     			var sTop = computer.contentWindow.scrollTop;
     			phone.contentWindow.scrollTo(sLeft, sTop);
-			console.log("works");
+			console.log("works"); */
+			// Get the scroll positions of the computer iframe's content window
+    			const sLeft = computer.contentWindow.scrollLeft;
+    			const sTop = computer.contentWindow.scrollTop;
+
+    			// Get the position of the phone iframe within its parent div
+    			const phoneRect = phone.getBoundingClientRect();
+    			const phoneOffsetLeft = phoneRect.left - phoneRect.width;
+    			const phoneOffsetTop = phoneRect.top - phoneRect.height;
+
+    			// Scroll the phone iframe to the same positions
+    			phone.contentWindow.scrollTo(sLeft + phoneOffsetLeft, sTop + phoneOffsetTop);
+
+    			// Log a message to the console to confirm that the function is working
+    			console.log("works");
 		};
 	</script>
 </body>
