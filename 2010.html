@@ -17,13 +17,13 @@
   		const computer = document.getElementById('computerscreen');
 		
 		computer.addEventListener('load', () => {
-			window.sLeft = computer.contentWindow.scrollLeft;
-			window.sTop = computer.contentWindow.scrollTop;
 			computer.contentWindow.addEventListener('scroll', handleScroll);
 		});
 
 		function handleScroll() {
-    			phone.contentWindow.scrollTo(window.sLeft, window.sTop);
+			const sLeft = computer.contentWindow.scrollLeft;
+    			const sTop = computer.contentWindow.scrollTop;
+    			phone.contentWindow.scrollTo(sLeft, sTop);
 			console.log("works");
 		};
 	</script>
