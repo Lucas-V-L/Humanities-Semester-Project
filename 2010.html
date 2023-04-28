@@ -21,8 +21,8 @@
 		});
 
 		function handleScroll() {
-			const sLeft = computer.contentWindow.scrollLeft;
-    			const sTop = computer.contentWindow.scrollTop;
+			var sLeft = computer.contentWindow.scrollLeft;
+    			var sTop = computer.contentWindow.scrollTop;
     			phone.contentWindow.scrollTo(sLeft, sTop);
 			console.log("works");
 		};
