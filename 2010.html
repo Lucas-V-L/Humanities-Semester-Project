@@ -17,12 +17,16 @@
   		const computer = document.getElementById('computerscreen');
 		
 		computer.addEventListener('load', () => {
+			var sLeft = computer.contentWindow.scrollLeft;
+			var sTop = computer.contentWindow.scrollTop;
 			computer.contentWindow.addEventListener('scroll', handleScroll);
 		});
 
 		function handleScroll() {
-    			phone.contentWindow.scrollTo(computer.contentWindow.scrollLeft, computer.contentWindow.scrollTop);
-			console.log("works");
+			phone.addEventListener('load', () => {
+    				phone.contentWindow.scrollTo(sLeft, sTop);
+				console.log("works");
+			});
 		};
 	</script>
 </body>
