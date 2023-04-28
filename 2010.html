@@ -31,9 +31,8 @@
     			const sTop = computer.contentWindow.scrollTop;
 
     			// Get the position of the phone iframe within its parent div
-    			const phoneRect = phone.getBoundingClientRect();
-    			const phoneOffsetLeft = phoneRect.left - phoneRect.width;
-    			const phoneOffsetTop = phoneRect.top - phoneRect.height;
+    			const phoneOffsetLeft = phone.offsetLeft;
+    			const phoneOffsetTop = phone.offsetTop;
 
     			// Scroll the phone iframe to the same positions
     			phone.contentWindow.scrollTo(sLeft + phoneOffsetLeft, sTop + phoneOffsetTop);
