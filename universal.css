@@ -44,4 +44,54 @@ nav {
 	width: 100%;
 	background-color: red;
 	top: calc(100% - 10px);
+	transition: 1s;
+	border-top: solid 3px black;
 }
+
+.dbcontainer {
+	text-align: center;
+	height: 0px;
+}
+
+.drawerbutton {
+	transform: translateY(-100%);
+	cursor: pointer;
+	padding: 10px 20px 0px 20px;
+	position: static;
+	display: inline-block;
+	text-align: center;
+	background-color: red;
+	border-radius: 5px 5px 0px 0px;
+	border: solid 3px black;
+       	border-bottom: none;	
+}
+.drawerbutton::before {
+	content: "";
+	position: absolute;
+	background-color: none;
+	left: -10px;
+	bottom: 0px;
+	height: 7px;
+	width: 7px;
+	border: 3px solid black;
+	border-left: none;
+	border-top: none;
+	border-bottom-right-radius: 25px;
+	box-shadow: 3px 3px 0 0 red;
+}
+
+.drawerbutton::after {
+        content: "";
+        position: absolute;
+        background-color: none;
+        right: -10px;
+        bottom: 0px;
+        height: 7px;
+        width: 7px;
+        border: 3px solid black;
+        border-right: none;
+        border-top: none;
+        border-bottom-left-radius: 25px;
+        box-shadow: -3px 3px 0 0 red;
+}
+
