@@ -38,3 +38,10 @@ nav {
 	transform-origin: top left;
 }
 
+#drawer {
+	position: fixed;
+	height: 95%;
+	width: 100%;
+	background-color: red;
+	top: calc(100% - 10px);
+}

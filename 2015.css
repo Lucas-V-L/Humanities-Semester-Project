@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+}
+
+.computer_screen {
+	width: 65%;
+	height: 48.75%;
+	margin-bottom: 10%;
+}
+.computer_screen iframe {
+	width: 1920px;
+	height: 1080px;
+}
+
+.phone_screen {
+	width: 20%;
+	height: 50%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
+
+.phone_screen iframe {
+	width: 200px;
+	height: 400px;
+}

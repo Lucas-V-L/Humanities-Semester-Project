@@ -1,3 +1,10 @@
+function openCitationDrawer(sourceID) {
+	drawer = document.getElementById("drawer");
+        document.getElementById(sourceID).style.backgroundColor = "yellow";
+        drawer.style.top = "5%";
+}      
+
+
 const frame = document.getElementById("frame");
 const container = document.getElementById("computer_screen");
 const initialHeight = frame.clientHeight;
