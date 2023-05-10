@@ -10,6 +10,7 @@ main {
 	border: 5px solid black;
 	border-radius: 15px;
 	padding: 15px;
+	background-color: #757575;
 }
 
 body {

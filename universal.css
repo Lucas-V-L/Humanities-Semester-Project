@@ -1,10 +1,15 @@
+:root {
+	--drawer-bg-color: #757575;
+	--drawer-border-color: black;
+}
+
 .screen iframe{
 	background-color: white;
 	border: 0;
 	border-radius: 2px;
 }
 
-body {
+.container {
 	height: 100dvh;
 	width: 133.33333333333dvh;
 	max-width: 100vw;
@@ -16,10 +21,9 @@ body {
 	flex: auto 0 0;
 }
 
-html {
+body, html {
 	overflow: hidden;
 	background-color: #000000;
-	opacity: 0.9;
 	background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#3e3e3e 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #3e3e3e 1.2000000000000002px, #000000 1.2000000000000002px) -0.6000000000000001px 0;
 	background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
 	display: flex;
@@ -40,29 +44,32 @@ nav {
 
 #drawer {
 	position: fixed;
-	height: 95%;
-	width: 100%;
-	background-color: red;
+	height: calc(100% - 40px);
+	width: calc(100% + 6px);
+	background-color: var(--drawer-bg-color);
 	top: calc(100% - 10px);
-	transition: 1s;
-	border-top: solid 3px black;
+	transition: top 1s;
+	border: solid 3px var(--drawer-border-color);
+	border-bottom: none;
+	padding: 0px 8px 8px 8px;
+	border-radius: 20px 20px 0px 0px;
 }
 
 .dbcontainer {
 	text-align: center;
-	height: 0px;
+	height: 8px;
 }
 
 .drawerbutton {
 	transform: translateY(-100%);
 	cursor: pointer;
-	padding: 10px 20px 0px 20px;
+	padding: 3px 20px 3px 20px;
 	position: static;
 	display: inline-block;
 	text-align: center;
-	background-color: red;
-	border-radius: 5px 5px 0px 0px;
-	border: solid 3px black;
+	background-color: var(--drawer-bg-color);
+	border-radius: 15px 15px 0px 0px;
+	border: solid 3px var(--drawer-border-color);
        	border-bottom: none;	
 }
 .drawerbutton::before {
@@ -73,11 +80,11 @@ nav {
 	bottom: 0px;
 	height: 7px;
 	width: 7px;
-	border: 3px solid black;
+	border: 3px solid var(--drawer-border-color);
 	border-left: none;
 	border-top: none;
 	border-bottom-right-radius: 25px;
-	box-shadow: 3px 3px 0 0 red;
+	box-shadow: 3px 3px 0 0 var(--drawer-bg-color);
 }
 
 .drawerbutton::after {
@@ -88,10 +95,13 @@ nav {
         bottom: 0px;
         height: 7px;
         width: 7px;
-        border: 3px solid black;
+        border: 3px solid var(--drawer-border-color);
         border-right: none;
         border-top: none;
         border-bottom-left-radius: 25px;
-        box-shadow: -3px 3px 0 0 red;
+        box-shadow: -3px 3px 0 0 var(--drawer-bg-color);
 }
 
+#arrow {
+	transition: transform 1s;
+}

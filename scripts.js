@@ -1,14 +1,16 @@
 function toggleCitationDrawer(sourceID) {
 	drawer = document.getElementById("drawer");
+	arrow = document.getElementById("arrow");
 	cits = document.querySelectorAll(".citation");
 	if (drawer.style.top === "40px") {
 		drawer.style.top = "calc(100% - 10px)";
+		arrow.style.transform = "rotate(360deg)";
 		cits.forEach(cit => {
 			cit.style.backgroundColor = "";
-			console.log("lol");
 		})
 	} else { 
 		drawer.style.top = "40px";
+		arrow.style.transform = "rotate(180deg)";
 	}
 	if (sourceID) {document.getElementById(sourceID).style.backgroundColor = "yellow"};
 }      

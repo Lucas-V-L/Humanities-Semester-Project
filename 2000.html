@@ -2,17 +2,26 @@
 <html>
 <head>
         <title>Year 2000</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 	<link rel="stylesheet" href="universal.css">
         <link rel="stylesheet" href="2000.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class="container" id="content">
+	<script src="begin.js"></script>
 	<nav><a href="1995.html" class="left">&lt;-- Previous</a> <a class="center">2000<a> <a href="2005.html" class="right">Next --&gt;</a></nav>
 	<div class="computer_screen screen" id="computer_screen">
 		<iframe id="frame" src="oldpages/2000/index.html"></iframe>
 	</div>
+	<div id="drawer">
+		<div class="dbcontainer"><div class="drawerbutton" id="drawerbutton" onclick="toggleCitationDrawer()"><i class="fa fa-chevron-up" id="arrow"></i></div></div>
+		<p> <span id="one" class="citation">testing 123</span></p>
+        </div>
 
 	<script src="scripts.js"></script>
 
+</div>
 </body>
 </html>
 
