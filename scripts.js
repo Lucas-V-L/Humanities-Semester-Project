@@ -48,7 +48,7 @@ try {
 	phoneInitialWidth = phoneFrame.clientWidth;
 	phoneCurrentWidth = phoneInitialWidth;
 	phoneCurrentHeight = phoneInitialHeight;
-
+	currentPhoneHeight = phoneInitialHeight;
 }
 catch (error) {console.log("No Phone!")}
 
@@ -61,7 +61,6 @@ function scalePhoneScreen() {
 	catch (error) {console.log("No Phone!")}
 }
 
-currentPhoneHeight = phoneInitialHeight;
 function zoomPhoneScreen(factor) {
         factor = 1/factor;
         phoneCurrentHeight = phoneInitialHeight * factor;

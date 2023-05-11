@@ -76,7 +76,8 @@ nav {
 	background-color: var(--drawer-bg-color);
 	border-radius: 15px 15px 0px 0px;
 	border: solid 3px var(--drawer-border-color);
-       	border-bottom: none;	
+       	border-bottom: none;
+	box-shadow: 0 3px 0 0 var(--drawer-bg-color);	
 }
 .drawerbutton::before {
 	content: "";
