@@ -7,6 +7,11 @@
 	background-color: white;
 	border: 0;
 	border-radius: 2px;
+	position: relative;
+}
+
+.screen { 
+	position: relative;
 }
 
 .container {
@@ -53,6 +58,7 @@ nav {
 	border-bottom: none;
 	padding: 0px 8px 8px 8px;
 	border-radius: 20px 20px 0px 0px;
+	z-index: 99;
 }
 
 .dbcontainer {
@@ -104,4 +110,16 @@ nav {
 
 #arrow {
 	transition: transform 1s;
+}
+
+.plus, .minus {
+	z-index: 2;
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin: 5px;
+	font-size: 20px;
+}
+.minus {
+	transform: translateX(-120%);
 }
