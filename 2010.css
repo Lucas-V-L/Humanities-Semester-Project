@@ -3,10 +3,30 @@
 	margin: 0px;
 }
 
+.container {
+	background-image: url("2010-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.phone_img {
+	position: relative !important;
+	width: 0;
+	height: 95%;
+	bottom: -20%;
+	right: 25.5%;
+	pointer-events: none;
+}
+.phone_img img {
+	height: 100%;
+}
+
 .computer_screen {
-	width: 65%;
-	height: 48.75%;
-	margin-bottom: 10%;
+	width: 70%;
+	height: 52.5%;
+	margin-left: 0%;
+	margin-bottom: 6%;
 }
 .computer_screen iframe {
 	width: 1920px;
@@ -14,13 +34,14 @@
 }
 
 .phone_screen {
-	width: 20%;
-	height: 50%;
-	margin-left: 5%;
-	margin-bottom: 5%;
+	width: 16.078125%;
+	height: 36.75%;
+	margin-left: 3.7%;
+	margin-right: 3.8%;
+	margin-bottom: 0.2%;
 }
 
 .phone_screen iframe {
-	width: 320px;
-	height: 600px;
+	width: 280px;
+	height: 480px;
 }
