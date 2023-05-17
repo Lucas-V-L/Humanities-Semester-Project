@@ -6,10 +6,23 @@
 .computer_screen {
 	width: 65%;
 	height: 65%;
-	margin-bottom: 10%;
+	margin-bottom: 15%;
 }
+
+.container {
+	background-image: url("/2000-laptop.jpg");
+	background-repeat: no-repeat;
+	background-position: 60% 0;
+	background-size: 134.5%;
+	perspective: 1000px;
+}
+
 .computer_screen iframe {
         width: 840px;
         height: 630px;
+}
+
+.computer_screen {
+	transform: rotateX(-3deg) rotateY(0.5deg) !important;
 }
 
