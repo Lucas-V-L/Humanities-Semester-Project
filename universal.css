@@ -41,6 +41,16 @@ body, html {
 nav {
         position: fixed;
         top: 0;
+	background-color: #0f0f0f;
+	color: white;
+	padding: 6px;
+	border-radius: 0 0 6px 6px;
+	border: solid 3px darkgray;
+	border-top: none;
+}
+
+nav .left, nav .right {
+	color: lightgray !important;
 }
 
 #frame, #phoneframe {
