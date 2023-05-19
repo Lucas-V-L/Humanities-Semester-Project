@@ -71,6 +71,11 @@ nav .left, nav .right {
 	z-index: 99;
 }
 
+#drawer p {
+	text-indent: -0.5in;
+	padding-left: 0.5in;
+}
+
 .dbcontainer {
 	text-align: center;
 	height: 8px;
