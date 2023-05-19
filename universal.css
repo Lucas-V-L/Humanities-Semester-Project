@@ -26,6 +26,10 @@
 	flex: auto 0 0;
 }
 
+span {
+	transition: background-color 1s;
+}
+
 body, html {
 	overflow: hidden;
 	background-color: #202020;
@@ -71,9 +75,20 @@ nav .left, nav .right {
 	z-index: 99;
 }
 
+.drawertext {
+	word-break: break-word;
+	overflow: auto;
+	max-height: 100%;
+	position: relative;
+}
+
 #drawer p {
 	text-indent: -0.5in;
 	padding-left: 0.5in;
+}
+
+p + p {
+	padding-top: 1em;
 }
 
 .dbcontainer {
