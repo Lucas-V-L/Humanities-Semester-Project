@@ -3,31 +3,44 @@
 <head>
 	<link rel="stylesheet" href="style.css">
 	<title>lol</title>
+	<script>
+        function source(sourceID) {
+                parent.toggleCitationDrawer(sourceID);
+        }
+        </script>
 </head>
 <body>
 
-<div class="flashapp" id="flashapp">
+<div class="flashapp">
+<div class="innerdiv" id="flashapp">
 	<div class="button what">What was flash?</div>
 	<div class="tooltip what">
-		<p>Flash was revolutionary, while there were alternatives to flash, they were nowhere near what flash cound do [source]. Flash allowed developers to make their websites much more interactive which greatly improved accessebility to average people who did not know how to use the internet. While the world wide web was gaining popularity, it was still a rather new thing, and for many very unknown [source]. Flash made it much easier to use the internet as now not only was it possible to add arrows and tutorials on how to navigate your page, but once the page was loaded you no longer had to wait for new elements to load in every time you clicked something. [source] this also improved the average retention rate as not having to wait for a page to repeatedly load meant using the web was a much more pleasent experience.</p>
+		<p>Flash was revolutionary, while there were alternatives to flash, they were nowhere near what flash could do <a onclick="source('two')">[2]</a>. Flash allowed developers to make their websites much more interactive which greatly improved accessability to average people who did not know how to use the internet very well. While the world wide web was gaining popularity, it was still a rather new thing, and for many very unknown [source]. Flash made it much easier to use the internet as now not only was it possible to add arrows and tutorials on how to navigate your page, but once the page was loaded you no longer had to wait for new elements to load in every time you clicked something. [source] this also improved the average retention rate as not having to wait for a page to repeatedly load meant using the web was a much more pleasent experience.</p>
+		<p>Flash also saw use in the educational field, where it was used to increase students ability to retain information as it made the web easier, and more fun to use, alongside forcing user engagement to keep a student from getting distracted from the content<a onclick="source('one')">[1]</a></p>
 	</div>
 	<div class="button impact">How did it impact the web?</div>
-	<div class="tooltip impact">Flash set a new standard for the internet. it defined an age of interactive content, and if a page was not interactive, it was seen as worse than many others. Flash also setup the creation of JavaScript, as many of the issues with Flash became more apparent, people set out for a better solution, and while JavaScript had been around for a long time already, much of the development was pushed by the popularity of flash</div>
+	<div class="tooltip impact">
+		<p>Flash set a new standard for the internet. it defined an age of interactive content, and if a page was not interactive, it was seen as worse than many others. Flash also set up the advancement of JavaScript, as many of the issues with Flash became more apparent, people set out for a better solution, and while JavaScript had been around for a long time already, much of the development was pushed by the popularity of flash</p>
+		<p>Flash also opened the floodgates for much more creative expression, allowing designers to escape the bounds and limits of what conventional web development allowed to create more creative, impactful, and colorful websites<a onclick="source('two')">[2]</a>. websites were no longer just a set of documents, but an experience, one could spend hours browsing the web, finding interesting pages made by interesting people trying to express their interesting ideas. for the first time ever, the web seemed limitless.<iframe width="365" height="270" src="https://www.youtube-nocookie.com/embed/gWxb7EEggPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>A great example was the Levi's 150'th anniversary website. The only remains i could find of this website are a couple of low resolution screen recordings of it, however </p>
+	</div>
 	<div class="button con">What were the drawbacks?</div>
 	<div class="tooltip con">
 		<p>Flash did not come without it's drawbacks. for one, the content was non responsive [source]. this meant that content in a flash app could not easily be scaled to different screen sizes, decreasing accessebility for many users. had a large screen? get out a magnifying glass. had a small screen? have fun scrolling around to find the right button. another aspect that affected accessebility was Flash's inability to properly integrate with screenreadeader tools. [source] this hurt accessebility greatly as there were many sites built completely in flash such as the <a target="_blank" href="https://web.archive.org/web/20050207074317/http://www2.warnerbros.com/spacejam/">Space Jam Website</a>. Flash also came with a plethora of security side effects, mainly because Adobe Flash player was not built in to the browser, but rather a standalone application that would run any code presented to the browser without question [source].</p>
 	</div>
 </div>
+</div>
 
 <script>
 var maxstars = 0
 document.getElementById("flashapp").addEventListener('mousemove', function (e) {
+	var flashapp = document.getElementById("flashapp")
     //trail
 	var maxstars = maxstars + 1;
 	if (maxstars >= 10) { return; }
     [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
       var j = (1 - i) * 50;
-      var elem = document.createElement('div');
+      var tempelem = document.createElement("div")
+      var elem = flashapp.appendChild(tempelem);
       var size = Math.ceil(Math.random() * 10 * i) + 'px';
 
       //ramdom number between 0 and 1
@@ -54,9 +67,9 @@ document.getElementById("flashapp").addEventListener('mousemove', function (e) {
       //   i + ')';
       //elem.style.borderRadius = size;
       elem.style.pointerEvents = 'none';
-      document.body.appendChild(elem);
+      flashapp.appendChild(elem);
       window.setTimeout(function () {
-        document.body.removeChild(elem);
+        flashapp.removeChild(elem);
       }, Math.round(Math.random() * i * 1000));
     });
     ////

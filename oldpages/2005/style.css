@@ -5,7 +5,7 @@ html {
     .star-five {
       background: transparent;
       margin: 50px 0;
-      position: relative;
+      position: absolute;
       display: block;
       color: #ffffff;
       width: 0px;
@@ -53,6 +53,19 @@ html {
 	position: relative;
 }
 
+.innerdiv {
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+}
+
+a {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
 .tooltip {
 	display: none;
 	position: absolute;
@@ -61,12 +74,13 @@ html {
 	min-width: 350px;
 	min-height: 120px;
 	max-width: 400px;
-	max-height: 650px;
+	max-height: 350px;
 	box-sizing: border-box;
 	border: 5px solid black;
 	border-radius: 15px;
 	padding: 8px;
 	z-index: 999;
+	overflow: auto;
 }
 
 .button {
